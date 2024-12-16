@@ -1,0 +1,952 @@
+  /* Styles pour l'en-tête */
+  header {
+    color: white; /* Couleur du texte */
+    padding: 20px; /* Espacement interne */
+    text-align: center; /* Centre le texte */
+    position: relative; /* Position pour le logo */
+    background-color: #81b29a; /* Vert pastel */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  width: 15px; /* Largeur du logo */
+height: 150px;
+    position: absolute; /* Position absolue pour le logo */
+    top: -10px; /* Espacement du haut */
+    left: 20px; /* Espacement de la gauche */
+}
+header h1 {
+    font-size: 3em; /* Taille du titre */
+    margin: 20px 0 10px; /* Marges autour du titre */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombre pour le texte */
+    font-weight: 700;
+}
+header p {
+    font-size: 1.5em; /* Taille du sous-titre */
+    margin: 0; /* Supprime la marge par défaut */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Ombre pour le texte */
+    font-weight: 300;
+}
+
+/* Importation des polices modernes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+/* Styles globaux */
+body {
+    font-family: 'Montserrat', sans-serif; /* Police moderne */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1de; /* Beige pastel */
+    color: #3d405b; /* Bleu-gris foncé */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color:#f2cc8f; /* Bleu ciel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: black; /* Bleu moderne */
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s, border-bottom 0.3s;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    color: black; /* Bleu accent */
+    border-bottom: 2px solid #e07a5f;
+    transform: scale(1.1);
+}
+nav ul li a.active {
+    background-color: #e07a5f; /* Bleu accent */
+    color: white; /* Texte blanc */
+    border-bottom: 2px solid white; /* Indicateur actif */
+    font-weight: bold;
+    transform: scale(1.1); /* Légère mise en avant */
+}
+
+section {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.03);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #3d405b;
+}
+
+section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #3d405b;
+}
+.content {
+    display: flex;
+    align-items: flex-start; /* Aligner les éléments en haut */
+    justify-content: flex-start; /* Garder les éléments alignés à gauche */
+}
+
+.image-container {
+    flex: 1;
+    margin-right: 20px; /* Espace entre l'image et le contenu textuel */
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.text-wrapper {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-container,.about {
+    margin-bottom: 20px; /* Espacement entre les sections */
+}
+/* pour l'animation des lettres une par une*/
+#output {
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.letter {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+button {
+    background-color: #e07a5f; /* Rouge pastel */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #81b29a; /* Vert pastel */
+    transform: scale(1.05);
+}
+/* Conteneur des lignes */
+.row {
+    display: flex;
+    flex-wrap: nowrap; /* Empêche le retour à la ligne pour les sections */
+    gap: 10px; /* Réduit l'espace entre les sections */
+    margin: 10px; /* Réduit la marge externe */
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: -50px;
+}
+
+.row section {
+    
+    flex: 1; /* Les sections prennent une largeur égale */
+    border: 1px solid #ccc; /* Optionnel : pour visualiser */
+   margin-bottom: 20px;}
+
+
+.langages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes de largeur égale */
+    gap: 10px; /* Espace entre les éléments */
+}
+
+.langage {
+    display: flex; /* Alignement horizontal pour l'icône et le texte */
+    align-items: center; /* Centrer verticalement */
+    gap: 5px;
+}
+/* Style pour les icônes */
+.langage img {
+    width: 20px;
+    height: auto;
+      margin-right: 5px; /* Espacement entre l'icône et le texte */
+}
+
+/* Style pour le texte */
+.langage span {
+    margin-left: 0;
+    font-size: 16px;
+    color: #333;
+}
+ul {
+    list-style-position: inside; /* Positionne les puces à l'intérieur de la liste */
+    padding-left: 0; /* Enlève l'espace à gauche de la liste */
+}
+
+li {
+    margin: 0; /* Enlève les marges autour des éléments de la liste */
+    padding: 0; /* Enlève les paddings autour des éléments de la liste */
+}
+
+
+/* Style pour le titre de la section */
+/* Style pour le titre de la section */
+#titre-stage {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center; /* Centrer le titre */
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e07a5f; /* Ligne décorative sous le titre */
+}
+
+/* Style spécifique pour un contenu aligné à gauche */
+#stagelu {
+    text-align: left; /* Aligne le texte à gauche */
+}
+
+/* Style pour le paragraphe des objectifs */
+#objectifs-stage {
+    font-size: 16px;
+    color: #555;
+    text-align: left; /* Aligner le texte à gauche */
+}
+
+/* Style pour la description masquée */
+.description {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre douce pour un effet surélevé */
+    position: relative; /* Nécessaire pour positionner la croix de fermeture */
+    display: none; /* Masqué par défaut */
+    text-align: left; /* Aligner le texte à gauche dans la description */
+}
+
+/* Style pour la date */
+.date-stage {
+    text-align: center; /* Aligner la date à gauche */
+    font-size: 1.2rem; /* Taille légèrement augmentée */
+    margin: 1rem 0; /* Espacement vertical */
+    color: #333; /* Couleur du texte */
+}
+
+/* Style pour le bouton centré */
+.btn-center {
+    display: block; /* Assure que le bouton occupe une ligne entière */
+    margin: 1rem auto; /* Centre le bouton horizontalement */
+    padding: 0.5rem 1rem; /* Dimensions du bouton */
+    font-size: 1rem; /* Taille du texte */
+    background-color: #e07a5f; /* Couleur de fond */
+    color: black; /* Couleur du texte */
+    border: none; /* Suppression des bordures */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Affiche un curseur pointeur */
+    text-align: center; /* Texte centré dans le bouton */
+    transition: background-color 0.3s ease; /* Animation pour le survol */
+}
+
+/* Changement de couleur lors du survol */
+.btn-center:hover {
+    background-color: #81b29a; /* Couleur de fond modifiée */
+}
+
+/* Style pour le bouton de fermeture (croix) */
+.close-btn {
+    position: absolute; /* Permet de positionner en haut à droite */
+    top: 10px;
+    right: 10px;
+    background: none; /* Pas de fond */
+    border: none; /* Pas de bordure */
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer; /* Curseur pointeur */
+    color: #e07a5f; /* Couleur initiale */
+}
+
+/* Couleur modifiée au survol */
+.close-btn:hover {
+    color: black;
+}
+
+/* Style pour l'image avec l'ID "socite" */
+#socite {
+    float: right; /* Positionné à droite du texte */
+    width: 100px; /* Taille fixe de l'image */
+    margin-left: 10px; /* Espacement avec le contenu à gauche */
+}
+
+/* Correction de l'espacement et de la structure */
+#stage {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center; /* Centre tout le texte dans #stage (si nécessaire) */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre douce pour effet visuel */
+    margin-bottom: 20px;
+}
+
+
+
+.section li {
+    font-weight: bold; /* Applique le style gras */
+    font-size: 1.2em;  /* Optionnel : agrandit légèrement le texte */
+    margin-bottom: 10px; /* Optionnel : ajoute de l'espace sous le titre */
+    color: #333; /* Optionnel : change la couleur si nécessaire */
+}
+
+.section:nth-of-type(1) img,
+.section:nth-of-type(4) img {
+    max-width: 50%; /* Taille de l'image de la première section */
+    height: auto;
+    margin: 10px auto; /* Espace autour de chaque image */
+    display: block; /* Utilise le comportement inline-block pour les images */
+}
+
+.section img {
+    max-width: 20%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px auto; /* Espace autour des images */
+    display: block; /* Affiche les images sur la même ligne */
+}
+
+.images {
+    display: flex; /* Flexbox pour aligner les images sur une ligne */
+    align-items: center; /* Aligne les images verticalement si nécessaire */
+    white-space: nowrap; /* Empêche les images de passer à la ligne suivante */
+}
+
+.images img {
+    display: inline-block; /* Assure que les images restent sur la même ligne */
+}
+
+
+
+/* Section générale */
+section {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Titre de la section */
+#titre-passions {
+    color: #333;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Description générale */
+#description-passions {
+    font-size: 1.2em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Liste des passions */
+#liste-passions {
+    list-style-type: square;
+    padding-left: 40px;
+    font-size: 1.1em;
+    color: #444;
+    text-align: center;
+}
+
+/* Chaque élément de la liste */
+.passion {
+    margin-bottom: 10px;
+}
+
+/* Titre des images */
+#images-titre {
+    color: #555;
+    font-size: 1.5em;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Conteneur des images */
+#images-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Structure des images avec titre sous l'image */
+figure {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    width: 300px; /* Taille fixe pour chaque image */
+}
+
+/* Nom sous l'image */
+figcaption {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px; /* Le nom apparaît en dessous de l'image */
+    font-weight: bold;
+}
+
+
+/* Images - Taille égale pour toutes les images */
+.image-passion {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Occupe toute la largeur de la figure */
+    height: 200px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Cette propriété permet de couvrir l'élément sans déformer l'image */
+}
+
+/* Titre des vidéos */
+#videos-titre {
+    color: #555;
+    font-size: 1.5em;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Conteneur des vidéos */
+#videos-container {
+    display: flex;
+    justify-content: center; /* Aligne les vidéos horizontalement */
+    gap: 20px; /* Espacement entre les vidéos */
+    flex-wrap: nowrap; /* Empêche les vidéos de se déplacer sur plusieurs lignes */
+    margin-top: 20px;
+}
+
+/* Vidéos - Taille ajustée */
+video {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%; /* Réduit la largeur des vidéos à 30% de l'espace disponible */
+    height: auto;
+}
+
+/* Responsive design (pour les petites résolutions) */
+@media (max-width: 768px) {
+    section {
+        padding: 15px;
+    }
+
+    #titre-passions {
+        font-size: 1.8em;
+    }
+
+    #images-titre, #videos-titre {
+        font-size: 1.3em;
+    }
+
+    #description-passions {
+        font-size: 1em;
+    }
+
+    #liste-passions {
+        padding-left: 20px;
+    }
+
+    /* Images */
+    .image-passion {
+        height: 180px; /* Ajuste la hauteur sur les petits écrans si nécessaire */
+    }
+
+    /* Conteneur des vidéos */
+    #videos-container {
+        flex-direction: column; /* Les vidéos passent en colonne sur petits écrans */
+    }
+
+    video {
+        width: 80%; /* Les vidéos prennent 80% de la largeur disponible sur petits écrans */
+    }
+}
+
+
+
+
+
+/*la barre footer*/
+footer {
+    text-align: center; /* Centre le contenu dans le footer (optionnel) */
+    background-color: #81b29a; /* Bleu-gris foncé */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+footer a {
+    color: #f2cc8f; /* Vert pastel */
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+footer a:hover {
+    color:#e07a5f; /* Jaune pastel */
+}
+.social-links {
+    display: inline-flex; /* Affiche tout sur une seule ligne */
+    align-items: center; /* Aligne verticalement les éléments */
+    gap: 10px; /* Espace entre les éléments */
+}
+
+.social-links i {
+    font-size: 32px; /* Taille des icônes */
+}
+
+.separator {
+    font-size: 32px; /* Taille du séparateur */}
+
+    
+
+
+/* Formulaires de quiz*/
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f4f1de; /* Beige pastel */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    color: #3d405b; /* Bleu-gris foncé */
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    background-color:white; /* Bleu moderne */
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+form textarea {
+    height: 120px;
+    resize: none;
+}
+
+form input[type="submit"] {
+    background-color: #e07a5f; /* Vert pastel */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+form input[type="submit"]:hover {
+    background-color:#81b29a; /* Rouge pastel */
+    transform: scale(1.05);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background-color: #81b29a; /* Vert pastel */
+    color: white;
+    font-weight: 700;
+}
+
+td {
+    color: #3d405b; /* Bleu-gris foncé */
+}
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    width: 350px;
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card  {
+    padding: 20px;
+    color: #f4f1de;
+    text-align: center;
+}
+
+.project-card .text h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.project-card  {
+    display: inline-block;
+    margin-top: 10px;
+    background-color:#81b29a;
+    color:  #f4f1de;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Style pour les options de contact */
+/* Style pour les options de contact avec Flexbox */
+.contact-options {
+    display: flex; /* Utilisation de Flexbox */
+    justify-content: space-between; /* Espacement entre les éléments */
+    flex-wrap: wrap; /* Permet aux éléments de se déplacer sur une nouvelle ligne si nécessaire */
+    gap: 20px; /* Espacement entre les cartes */
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%; /* Occupe toute la largeur disponible */
+    box-sizing: border-box; /* Inclut padding dans la largeur totale */
+}
+
+/* Style des cartes individuelles */
+.contact-card {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Animation pour l'effet hover */
+    flex-basis: 30%; /* Chaque carte prend environ 30% de l'espace disponible */
+    box-sizing: border-box; /* Inclut padding et bordure dans la taille totale */
+}
+
+.contact-card:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+/* Icônes dans les cartes */
+.contact-card i {
+    font-size: 2em; /* Taille de l'icône */
+    margin-bottom: 10px;
+}
+
+/* Boutons uniformisés dans les cartes */
+.contact-card button {
+    background-color: #f2cc8f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-card button:hover {
+    background-color: #e07a5f; /* Couleur du bouton au survol */
+}
+
+/* Formulaire de contact */
+.form-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Largeur du formulaire */
+    max-width: 800px; /* Largeur maximale */
+    margin-top: 20px; /* Espacement entre la section de contact et le formulaire */
+    box-sizing: border-box;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%; /* Les champs prennent toute la largeur disponible */
+    padding: 10px;
+    font-size: 14px; /* Taille de police plus petite */
+    margin-bottom: 15px; /* Espacement entre les champs */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Inclut le padding dans la taille totale */
+}
+form textarea {
+    height: 120px; /* Hauteur personnalisée pour la zone de texte */
+}
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+form input[type="submit"] {
+    background-color: #f2cc8f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%; /* Le bouton occupe toute la largeur disponible */
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e07a5f;
+}
+
+/* Style pour les options de contact avec Flexbox */
+.contact-options {
+    display: flex; /* Utilisation de Flexbox */
+    justify-content: space-between; /* Espacement entre les éléments */
+    flex-wrap: wrap; /* Permet aux éléments de se déplacer sur une nouvelle ligne si nécessaire */
+    gap: 20px; /* Espacement entre les cartes */
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%; /* Occupe toute la largeur disponible */
+    box-sizing: border-box; /* Inclut padding dans la largeur totale */
+}
+
+/* Style des cartes individuelles */
+.contact-card {
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Animation pour l'effet hover */
+    flex-basis: 30%; /* Chaque carte prend environ 30% de l'espace disponible */
+    box-sizing: border-box; /* Inclut padding et bordure dans la taille totale */
+}
+
+.contact-card:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+
+/* Icônes dans les cartes */
+.contact-card i {
+    font-size: 2em; /* Taille de l'icône */
+    margin-bottom: 10px;
+}
+
+/* Boutons uniformisés dans les cartes */
+.contact-card button {
+    background-color: #f2cc8f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-card button:hover {
+    background-color: #e07a5f; /* Couleur du bouton au survol */
+}
+
+/* Formulaire de contact */
+.form-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Largeur du formulaire */
+    max-width: 800px; /* Largeur maximale */
+    margin-top: 20px; /* Espacement entre la section de contact et le formulaire */
+    box-sizing: border-box;
+}
+
+/* Champs du formulaire */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%; /* Les champs prennent toute la largeur disponible */
+    padding: 10px;
+    font-size: 14px; /* Taille de police plus petite */
+    margin-bottom: 15px; /* Espacement entre les champs */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Inclut le padding dans la taille totale */
+}
+
+form textarea {
+    height: 120px; /* Hauteur personnalisée pour la zone de texte */
+}
+
+/* Label du formulaire */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Bouton du formulaire */
+form input[type="submit"] {
+    background-color: #f2cc8f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%; /* Le bouton occupe toute la largeur disponible */
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #e07a5f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-options {
+        justify-content: center; /* Centrer les éléments */
+    }
+
+    .contact-card {
+        flex-basis: 100%; /* Chaque carte prend 100% de l'espace sur les petits écrans */
+    }
+
+    .form-container {
+        width: 50%; /* Réduire la largeur du formulaire sur les petits écrans */
+    }
+}
+
+
+
+/* Bouton flottant */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #e07a5f;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-button:hover {
+    background-color: #81b29a; /* Vert pastel */
+    transform: scale(1.1);
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+
+
+
+    /* Ajoutez un peu de style pour le dropdown et le contenu */
+    .dropdown {
+        list-style: none;
+        position: relative;
+    }
+
+    .dropdown a {
+        text-decoration: none;
+        color: #333;
+        padding: 10px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .dropdown ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        min-width: 160px;
+    }
+
+    .dropdown:hover ul {
+        display: block;
+    }
+
+    /* Style du conteneur du contenu */
+    #content-container {
+        margin-top: 20px;
+    }
+
+    /* Pour l'animation des lettres */
+    .letter {
+        display: inline-block;
+        opacity: 0;
+        animation: showLetter 0.5s forwards;
+    }
+

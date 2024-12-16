@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcours Académique</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+
+            <img src="../assets/SA.png" alt="Mon Logo" class="logo" style="width: 250px;">
+        </a>
+        <h1>Mon Parcours Académique</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="competences.html">Compétences</a></li>
+            <li class="dropdown">
+                <a href="#" onclick="toggleDropdown()" class="active">Etude <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../pages/parcours.html" class="active">Parcours</a></li> 
+                    <li><a href="../pages/stages.html">Stages</a></li>
+                    <li><a href="../pages/matieres.html">Matières</a></li>
+                    <li><a href="../pages/manifestations.html">Manifestations</a></li>
+
+                </ul>
+            </li>
+            <li><a href="../index.html">Accueil</a></li>
+
+            <li><a href="../pages/passions.html">Passions</a></li>
+            <li><a href="../pages/quizz.html">Quizz</a></li>
+
+
+        </ul>
+    </nav>
+    <section>
+        <p>Voici les diplômes que j'ai obtenus au cours de mon parcours académique :</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Diplôme</th>
+                    <th>Établissement</th>
+                    <th>Année</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        Ingénierie en génie informatique
+                        <a href="matieres.html#iit">voir ses matières</a>
+                    </td>
+
+                    <td> Institut International de Technologie Sfax </td>
+                    <td>Depuis 2024</td>
+                    <td>En cours</td>
+                </tr>
+                <tr>
+                    <td>Licence en Sciences Informatiques <a href="matieres.html#isims">voir ses matières</a> </td>
+                    <td>Institut supérieur d'informatique et multimédia </td>
+                    <td>2024</td>
+                    <td><img src="../assets/diplome licence.jpg" alt="Licence" width="250"></td>
+                </tr>
+                <tr>
+                    <td>Baccalauréat Scientifique</td>
+                    <td>Lycée 15 novembre 1955</td>
+                    <td>2021</td>
+                    <td><img src="../assets/diplome ba.jpg" alt="Baccalauréat" width="250"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/sondes-affes-384064268/" target="_blank">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <span class="separator">|</span>
+            <a href="https://github.com/sondes2311" target="_blank">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="footer__copyright">
+            <p>&copy;Affes Sondes Portfolio.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

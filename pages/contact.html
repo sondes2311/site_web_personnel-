@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <header>
+        <a href="../index.html">
+
+            <img src="../assets/SA.png" alt="Mon Logo" class="logo" style="width: 250px;">
+        </a>
+        <h1>Contactez-moi</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="competences.html">Compétences</a></li>
+            <li class="dropdown">
+                <a href="#" onclick="toggleDropdown()">Etude <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../pages/parcours.html">Parcours</a></li> 
+                    <li><a href="../pages/stages.html">Stages</a></li>
+                    <li><a href="../pages/matieres.html">Matières</a></li>
+                    <li><a href="../pages/manifestations.html">Manifestations</a></li>
+
+                </ul>
+            </li>
+            <li><a href="../index.html">Accueil</a></li>
+
+            <li><a href="../pages/passions.html">Passions</a></li>
+            <li><a href="../pages/quizz.html">Quizz</a></li>
+
+
+        </ul>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="contact-options">
+                <article class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>affessondes23@gmail.com</p>
+                    <a href="mailto:affessondes23@gmail.com"><button>Envoyer un message</button></a>
+            
+                </article>
+                <article class="contact-card">
+                    <i class="fab fa-facebook-messenger"></i>
+                    <h3>Messenger</h3>
+                    <p>Sondes Affes</p>
+                    <a href="https://www.messenger.com/t/100008252228564" target="_blank"><button>Envoyer un
+                            message</button></a>
+                </article>
+                <article class="contact-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>+21650589761</p>
+                    <a href="https://wa.me/+21650589761" target="_blank"><button>Envoyer un message</button></a>
+                </article>
+            </div>
+
+            <form class="form-container" action="YOUR_FORM_PROCESSING_URL" method="POST">
+                <label for="name">Votre Nom</label>
+                <input type="text" id="name" name="name" placeholder="Votre Nom" required>
+
+                <label for="email">Votre Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre Email" required>
+
+                <label for="message">Votre Message</label>
+                <textarea id="message" name="message" placeholder="Votre Message"></textarea>
+                <input type="submit" value="Envoyer message">
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/sondes-affes-384064268/" target="_blank">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <span class="separator">|</span>
+            <a href="https://github.com/sondes2311" target="_blank">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+        </div>
+        <div class="footer__copyright">
+            <p>&copy;Affes Sondes Portfolio.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
